@@ -1,13 +1,13 @@
-import pygame, random
-import sys
-import random
+## This project was peer programmed with Chris Roth
+
+import pygame, random, sys, math
 # Define some colors and other constants
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GRAY = (25, 25, 25)
 starting_margins = 5
-square_size_w_padding = 5
-border = 2
+square_size_w_padding = 20 if len(sys.argv) == 2 else int(sys.argv[2])
+border = math.ceil(square_size_w_padding / 10)
 #### RECCOMMENDED MAX = 45
 num_squares = 23 if len(sys.argv) == 1 else int(sys.argv[1])
 WIN_SIZE =  square_size_w_padding * num_squares
